@@ -16,8 +16,7 @@ public class Main {
         URL url = Main.class.getResource("/myo"); // Ищется в resources target
         File file = new File(url.toURI());
 
-
-        for (String str : Files.readAllLines(Paths.get(url.getPath()))) { // return readAllLines(path, StandardCharsets.UTF_8);
+        for (String str : Files.readAllLines(Paths.get(file.getPath()))) { // return readAllLines(path, StandardCharsets.UTF_8);
 
             System.out.println("String: ");
             System.out.println(str);
